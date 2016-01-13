@@ -1,0 +1,20 @@
+/*
+ Copyright (c) 2013
+ 
+ Radiant Images iOS is licensed under a Creative Commons Attribution 3.0 Unported License.
+ Based on an original source created by David L. Condrey
+ Permissions beyond the scope of this license may be available by contacting the developer at davidcondrey@me.com
+ To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/.
+ */
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#endif

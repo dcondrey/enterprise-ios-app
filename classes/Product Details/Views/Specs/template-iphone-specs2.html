@@ -1,0 +1,39 @@
+<!-- Copyright 2013 David Condrey -->
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="modernizr.custom.29473.js"></script>
+        
+        <style>
+            body,div,ul,ol,li,h1,p,th,td { margin:0; padding:0; }
+            html,body { margin:0; padding:0; }
+            body { font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; background: #e0e3ec url(../images/bgnoise_lg.jpg) repeat top left; overflow-y: scroll; }
+            .container { width: 90%; position: relative; }
+            .container > header{ padding: 10px 10px 4px 10px; margin: 0px 5px 5px 5px; position: relative; display: block; text-align: center; }
+            .container > header h1 { font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif; font-size: 24px; line-height: 30px; position: relative; font-weight: 300; color: #3d7489; text-shadow: 1px 1px 1px rgba(0,0,0,0.2); }
+            .container > header h1 span { font-size: 22px; color: #80B8CE; text-shadow: 0px 1px 1px rgba(255,255,255,0.8); }
+            table { border-collapse:collapse; }
+            td:first-child { width: 90px; font-size: 10px;text-align: left; line-height: 190%; padding-left: 4px; white-space: nowrap; overflow: hidden; text-overflow:ellipsis; }
+            td:first-child::first-letter { opacity: 0; }
+            td:nth-child(2) { width: auto; font-size: 13px;text-align: left; line-height: 190%; padding-left: 6px; white-space: nowrap; overflow: hidden; text-overflow:ellipsis; }
+            tr { border-bottom: 1px; border-style: solid; border-color: #000; border-top-style: none; border-left-style: none; border-right-style: none;}
+            
+            </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1><%label%> <span><%sublabel%></span></h1>
+            </header>
+		</div>
+        
+        <hr />
+        <table>
+            <%spec_tab%>
+        </table>
+    </body>
+</html>

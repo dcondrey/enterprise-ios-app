@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Comment">
+            <connections>
+                <outlet property="addButon" destination="97" id="103"/>
+                <outlet property="backgroundGradient" destination="9" id="51"/>
+                <outlet property="cancelButton" destination="98" id="102"/>
+                <outlet property="countLabel" destination="45" id="58"/>
+                <outlet property="stepper" destination="41" id="59"/>
+                <outlet property="titleLabel" destination="3" id="52"/>
+                <outlet property="userComment" destination="37" id="53"/>
+                <outlet property="view" destination="1" id="56"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.92000001668930054" contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleToFill" image="darkbackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="9">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bodybar.png" translatesAutoresizingMaskIntoConstraints="NO" id="63">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="142"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Special Requests &amp; Quantity" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                    <rect key="frame" x="30" y="7" width="270" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="144"/>
+                        <constraint firstAttribute="width" constant="270" id="145"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37">
+                    <rect key="frame" x="12" y="43" width="295" height="227"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="295" id="146"/>
+                        <constraint firstAttribute="height" constant="227" id="147"/>
+                    </constraints>
+                    <color key="textColor" red="0.7607843876" green="0.84705889229999998" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="61"/>
+                    </connections>
+                </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bodybar.png" translatesAutoresizingMaskIntoConstraints="NO" id="69">
+                    <rect key="frame" x="1" y="287" width="320" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="140"/>
+                        <constraint firstAttribute="width" constant="320" id="141"/>
+                    </constraints>
+                </imageView>
+                <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="41">
+                    <rect key="frame" x="165" y="290" width="94" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="stepperValueChanged:" destination="-1" eventType="valueChanged" id="60"/>
+                    </connections>
+                </stepper>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45">
+                    <rect key="frame" x="41" y="278" width="69" height="54"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="148"/>
+                        <constraint firstAttribute="width" constant="69" id="149"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="60"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97">
+                    <rect key="frame" x="5" y="410" width="155" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="155" id="113"/>
+                        <constraint firstAttribute="height" constant="50" id="114"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="Add To Quote" backgroundImage="button01.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="addButtonTapped:" destination="-1" eventType="touchUpInside" id="105"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="98">
+                    <rect key="frame" x="160" y="410" width="155" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="155" id="143"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                    <state key="normal" title="Close" backgroundImage="button02.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="104"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="285" translatesAutoresizingMaskIntoConstraints="NO" id="106">
+                    <rect key="frame" x="17" y="323" width="285" height="74"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="74" id="150"/>
+                    </constraints>
+                    <string key="text">If you have multiple projects, items added will be attached to the active order.  If you have not setup a project yet, a default quote will be started and you can modify your contact information prior to submission.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="97" secondAttribute="bottom" constant="20" symbolic="YES" id="115"/>
+                <constraint firstAttribute="trailing" secondItem="3" secondAttribute="trailing" constant="20" symbolic="YES" id="116"/>
+                <constraint firstItem="69" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="1" id="117"/>
+                <constraint firstAttribute="bottom" secondItem="106" secondAttribute="bottom" constant="83" id="118"/>
+                <constraint firstItem="63" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="119"/>
+                <constraint firstItem="97" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="5" id="120"/>
+                <constraint firstItem="69" firstAttribute="centerY" secondItem="41" secondAttribute="centerY" id="121"/>
+                <constraint firstItem="63" firstAttribute="centerX" secondItem="37" secondAttribute="centerX" id="122"/>
+                <constraint firstItem="45" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="41" id="123"/>
+                <constraint firstItem="63" firstAttribute="top" secondItem="1" secondAttribute="top" id="124"/>
+                <constraint firstItem="69" firstAttribute="top" secondItem="1" secondAttribute="top" constant="287" id="125"/>
+                <constraint firstItem="63" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="126"/>
+                <constraint firstItem="9" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" id="127"/>
+                <constraint firstAttribute="trailing" secondItem="41" secondAttribute="trailing" constant="61" id="128"/>
+                <constraint firstItem="97" firstAttribute="top" secondItem="98" secondAttribute="top" id="129"/>
+                <constraint firstItem="3" firstAttribute="centerY" secondItem="63" secondAttribute="centerY" id="130"/>
+                <constraint firstAttribute="bottom" secondItem="98" secondAttribute="bottom" constant="20" symbolic="YES" id="131"/>
+                <constraint firstItem="98" firstAttribute="baseline" secondItem="97" secondAttribute="baseline" id="132"/>
+                <constraint firstItem="106" firstAttribute="centerX" secondItem="37" secondAttribute="centerX" id="133"/>
+                <constraint firstItem="9" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="134"/>
+                <constraint firstItem="9" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="135"/>
+                <constraint firstItem="37" firstAttribute="top" secondItem="63" secondAttribute="bottom" constant="8" symbolic="YES" id="136"/>
+                <constraint firstItem="45" firstAttribute="top" secondItem="37" secondAttribute="bottom" constant="8" symbolic="YES" id="137"/>
+                <constraint firstAttribute="trailing" secondItem="98" secondAttribute="trailing" constant="5" id="138"/>
+                <constraint firstItem="9" firstAttribute="top" secondItem="1" secondAttribute="top" id="139"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bodybar.png" width="638" height="44"/>
+        <image name="button01.png" width="240" height="96"/>
+        <image name="button02.png" width="240" height="96"/>
+        <image name="darkbackground.png" width="1024" height="1024"/>
+    </resources>
+</document>

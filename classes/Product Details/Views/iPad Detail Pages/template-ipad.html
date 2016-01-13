@@ -1,0 +1,41 @@
+<!-- Copyright 2013 David Condrey -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="modernizr.custom.29473.js"></script>
+    </head>
+    <body>
+        <div class="container">
+			<header>
+				<h1><%label%> <span><%sublabel%></span></h1>
+				<h2><%productsummary%></h2>
+			</header>
+			<section class="ac-container">
+				<div>
+					<input id="ac-1" name="accordion-1" type="checkbox" />
+					<label for="ac-1">Specifications</label>
+					<article class="ac-small">
+						<table>
+                            <%spec_tab%>
+						</table>
+					</article>
+				</div>
+				<div>
+					<input id="ac-2" name="accordion-1" type="checkbox" />
+					<label for="ac-2">Packing List</label>
+					<article class="ac-large">
+						<table>
+							<tr>
+								<th colspan="2">Package Includes</th>
+							</tr>
+							<%kit_tab%>
+						</table>
+					</article>
+				</div>
+			</section>
+        </div>
+    </body>
+</html>
